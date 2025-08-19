@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 
 url = os.getenv("DOMAIN")
-CORS(app, resources={r"/gerar-pix": {"origins": url}})
+CORS(app, origins=[url])
 
 
 # Rate limiting (100 requisições/hora por IP)
