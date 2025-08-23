@@ -9,8 +9,7 @@ import os
 app = Flask(__name__)
 
 url = os.getenv("DOMAIN")
-#CORS(app, origins=[url])
-CORS(app)
+CORS(app, origins=[url])
 
 
 # Rate limiting (100 requisições/hora por IP)
